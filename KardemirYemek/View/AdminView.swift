@@ -11,13 +11,21 @@ import ToastSwiftUI
 struct ContentView: View {
     @ObservedObject var viewModel = MealViewModel()
     @State private var date: Date = Date()
-    @State var text: String = "Yeni Yemekler..."
+    @State var text: String = ""
     @State var selectedFilter: MealTimesOptions = .ogle
     @State var editMode = false
     
     @State private var savedToast: Bool = false
-    @State private var editModeOn: Bool = false
-    @State private var editModeOff: Bool = false
+    
+    @State var value: CGFloat = 0
+    
+    @ObservedObject var monitor = NetworkMonitor()
+    
+    enum FocusField: Hashable {
+        case field
+      }
+
+      @FocusState private var focusedField: FocusField?
     
     init() {
         UITextView.appearance().backgroundColor = .clear
@@ -26,6 +34,7 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack {
+                NetworkControlView()
                 DatePicker(
                     "Start Date",
                     selection: $date,
@@ -51,30 +60,34 @@ struct ContentView: View {
                                     Button {
                                         if self.editMode {
                                             self.editMode = false
-                                            self.editModeOff = true
                                         } else {
                                             self.editMode = true
-                                            self.editModeOn = true
                                         }
                                     } label: {
                                         Image(systemName: "square.and.pencil")
-                                            .foregroundColor(Color.red)
+                                            .foregroundColor(monitor.isConnected ? Color.red : Color.gray)
                                             .font(.system(size: 18, weight: .bold, design: .default))
-                                    }
+                                    }.disabled(monitor.isConnected ? false : true)
                                 }
                                 .padding(.trailing, 40)
                                 
                                 Text(DateFormatter.displayDateDetail.string(from: date))
                                     .font(.system(size: 18, weight: .heavy, design: .default))
+                                Text(DateFormatter.displayDay.string(from: date))
+                                    .font(.system(size: 16, weight: .bold, design: .default))
                                 Text("(\(selectedFilter.title))")
                                     .padding(.top, 1)
-                                    .font(.system(size: 18, weight: .bold, design: .default))
+                                    .font(.system(size: 16, weight: .bold, design: .default))
                                 
                                 if editMode {
                                     TextEditor(text: $text)
                                         .font(.system(size: 15))
                                         .multilineTextAlignment(.center)
                                         .lineSpacing(5.0)
+                                        .focused($focusedField, equals: .field)
+                                                  .onAppear {
+                                                    self.focusedField = .field
+                                                }
                                 } else {
                                     Text(viewModel.currentMealText)
                                         .font(.system(size: 15))
@@ -102,16 +115,20 @@ struct ContentView: View {
                     }, label: {
                         Text("Kaydet")
                             .frame(width: 180, height: 40)
-                            .background(Color.green)
+                            .background(monitor.isConnected ? Color.green : Color.gray)
                             .foregroundColor(.black)
                     })
-                        .cornerRadius(20)
+                    .disabled(monitor.isConnected ? false : true)
+                    .cornerRadius(20)
                 }
                 
                 
                 
                 Spacer()
             }
+            
+            .offset(y: -self.value)
+            .animation(.easeInOut(duration: 0.5), value: self.value)
             .onChange(of: selectedFilter) { newValue in
                 let dateInformation = "\(selectedFilter.value)-\(DateFormatter.displayDate.string(from: date))"
                 let monthName = DateFormatter.displayMonthName.string(from: date)
@@ -125,12 +142,23 @@ struct ContentView: View {
                 self.editMode = false
             }
             .onChange(of: editMode) { newValue in
-                self.text = "Yeni Yemekler..."
+                self.text = ""
+            }
+            
+        }
+        .onAppear {
+            NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { noti in
+                let value = noti.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+                let height = value.height
+                
+                self.value = height-20
+            }
+            
+            NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { noti in
+                self.value = 0
             }
         }
         .toast(isPresenting: $savedToast, message: "Yemekler Kaydedildi!", icon: .success, backgroundColor: Color.green, autoDismiss: .after(2))
-        .toast(isPresenting: $editModeOn, message: "Düzenleme Açıldı!", icon: .info, backgroundColor: Color.green, autoDismiss: .after(1))
-        .toast(isPresenting: $editModeOff, message: "Düzenleme Kapatıldı!", icon: .info, backgroundColor: Color.red, autoDismiss: .after(1))
         
     }
 }
@@ -154,9 +182,15 @@ extension DateFormatter {
         return formatter
     }()
     
+    static let displayDay: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"
+        return formatter
+    }()
+    
     static let displayMonthName: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM"
+        formatter.dateFormat = "yyyy-MM"
         return formatter
     }()
 }

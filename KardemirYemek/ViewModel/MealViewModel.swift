@@ -29,13 +29,13 @@ class MealViewModel:ObservableObject {
     }
     
     func fetchMeals(dateInformation: String, monthName: String) {
+        self.currentMealText = "Yükleniyor..."
         Firestore.firestore().collection(monthName).document(dateInformation).getDocument { document, _ in
             if let data = document?.data() {
                 guard let mealDetailData = data["mealDetails"] as? String else { return }
                 self.currentMealText = mealDetailData
-                print(mealDetailData)
             } else {
-                self.currentMealText = ""
+                self.currentMealText = "Yemek kaydı bulunmuyor."
             }
             
         }

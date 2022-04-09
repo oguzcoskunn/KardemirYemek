@@ -18,6 +18,9 @@
 		671C6D7028019216002A1577 /* MealTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C6D6F28019216002A1577 /* MealTimesView.swift */; };
 		671C6D7228019737002A1577 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C6D7128019737002A1577 /* MealViewModel.swift */; };
 		671C6D752801E78E002A1577 /* ToastSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 671C6D742801E78E002A1577 /* ToastSwiftUI */; };
+		67B389B828022D9E006B287A /* KeyboardGuardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B389B728022D9E006B287A /* KeyboardGuardian.swift */; };
+		67B389BA280232DE006B287A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B389B9280232DE006B287A /* NetworkMonitor.swift */; };
+		67B389BF280238FE006B287A /* NetworkControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B389BE280238FE006B287A /* NetworkControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		671C6D6B28017970002A1577 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		671C6D6F28019216002A1577 /* MealTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTimesView.swift; sourceTree = "<group>"; };
 		671C6D7128019737002A1577 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
+		67B389B728022D9E006B287A /* KeyboardGuardian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardGuardian.swift; sourceTree = "<group>"; };
+		67B389B9280232DE006B287A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		67B389BE280238FE006B287A /* NetworkControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkControlView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		671C6D552801762A002A1577 /* KardemirYemek */ = {
 			isa = PBXGroup;
 			children = (
+				67B389BB2802383F006B287A /* Utilities */,
 				671C6D6E28017D70002A1577 /* View */,
 				671C6D6D28017D6B002A1577 /* ViewModel */,
 				671C6D562801762A002A1577 /* KardemirYemekApp.swift */,
@@ -95,9 +102,19 @@
 			isa = PBXGroup;
 			children = (
 				671C6D582801762A002A1577 /* AdminView.swift */,
+				67B389B728022D9E006B287A /* KeyboardGuardian.swift */,
 				671C6D6F28019216002A1577 /* MealTimesView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		67B389BB2802383F006B287A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				67B389B9280232DE006B287A /* NetworkMonitor.swift */,
+				67B389BE280238FE006B287A /* NetworkControlView.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +199,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				671C6D592801762A002A1577 /* AdminView.swift in Sources */,
+				67B389BA280232DE006B287A /* NetworkMonitor.swift in Sources */,
+				67B389B828022D9E006B287A /* KeyboardGuardian.swift in Sources */,
 				671C6D7228019737002A1577 /* MealViewModel.swift in Sources */,
 				671C6D7028019216002A1577 /* MealTimesView.swift in Sources */,
+				67B389BF280238FE006B287A /* NetworkControlView.swift in Sources */,
 				671C6D572801762A002A1577 /* KardemirYemekApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +343,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +373,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
