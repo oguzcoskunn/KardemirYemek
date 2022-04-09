@@ -8,22 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		671C6D572801762A002A1577 /* KardemirYemekApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C6D562801762A002A1577 /* KardemirYemekApp.swift */; };
-		671C6D592801762A002A1577 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C6D582801762A002A1577 /* ContentView.swift */; };
+		671C6D592801762A002A1577 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C6D582801762A002A1577 /* AdminView.swift */; };
 		671C6D5B2801762A002A1577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671C6D5A2801762A002A1577 /* Assets.xcassets */; };
 		671C6D5E2801762A002A1577 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671C6D5D2801762A002A1577 /* Preview Assets.xcassets */; };
 		671C6D66280176F3002A1577 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 671C6D65280176F3002A1577 /* FirebaseAnalytics */; };
 		671C6D68280176F3002A1577 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 671C6D67280176F3002A1577 /* FirebaseCrashlytics */; };
 		671C6D6A280176F3002A1577 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 671C6D69280176F3002A1577 /* FirebaseFirestore */; };
 		671C6D6C28017970002A1577 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 671C6D6B28017970002A1577 /* GoogleService-Info.plist */; };
+		671C6D7028019216002A1577 /* MealTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C6D6F28019216002A1577 /* MealTimesView.swift */; };
+		671C6D7228019737002A1577 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C6D7128019737002A1577 /* MealViewModel.swift */; };
+		671C6D752801E78E002A1577 /* ToastSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 671C6D742801E78E002A1577 /* ToastSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		671C6D532801762A002A1577 /* KardemirYemek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KardemirYemek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		671C6D562801762A002A1577 /* KardemirYemekApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KardemirYemekApp.swift; sourceTree = "<group>"; };
-		671C6D582801762A002A1577 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		671C6D582801762A002A1577 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		671C6D5A2801762A002A1577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		671C6D5D2801762A002A1577 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		671C6D6B28017970002A1577 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		671C6D6F28019216002A1577 /* MealTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTimesView.swift; sourceTree = "<group>"; };
+		671C6D7128019737002A1577 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			files = (
 				671C6D66280176F3002A1577 /* FirebaseAnalytics in Frameworks */,
 				671C6D68280176F3002A1577 /* FirebaseCrashlytics in Frameworks */,
+				671C6D752801E78E002A1577 /* ToastSwiftUI in Frameworks */,
 				671C6D6A280176F3002A1577 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,10 +65,11 @@
 		671C6D552801762A002A1577 /* KardemirYemek */ = {
 			isa = PBXGroup;
 			children = (
+				671C6D6E28017D70002A1577 /* View */,
+				671C6D6D28017D6B002A1577 /* ViewModel */,
 				671C6D562801762A002A1577 /* KardemirYemekApp.swift */,
-				671C6D582801762A002A1577 /* ContentView.swift */,
-				671C6D5A2801762A002A1577 /* Assets.xcassets */,
 				671C6D6B28017970002A1577 /* GoogleService-Info.plist */,
+				671C6D5A2801762A002A1577 /* Assets.xcassets */,
 				671C6D5C2801762A002A1577 /* Preview Content */,
 			);
 			path = KardemirYemek;
@@ -74,6 +81,23 @@
 				671C6D5D2801762A002A1577 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		671C6D6D28017D6B002A1577 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				671C6D7128019737002A1577 /* MealViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		671C6D6E28017D70002A1577 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				671C6D582801762A002A1577 /* AdminView.swift */,
+				671C6D6F28019216002A1577 /* MealTimesView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +120,7 @@
 				671C6D65280176F3002A1577 /* FirebaseAnalytics */,
 				671C6D67280176F3002A1577 /* FirebaseCrashlytics */,
 				671C6D69280176F3002A1577 /* FirebaseFirestore */,
+				671C6D742801E78E002A1577 /* ToastSwiftUI */,
 			);
 			productName = KardemirYemek;
 			productReference = 671C6D532801762A002A1577 /* KardemirYemek.app */;
@@ -127,6 +152,7 @@
 			mainGroup = 671C6D4A2801762A002A1577;
 			packageReferences = (
 				671C6D64280176F3002A1577 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				671C6D732801E78E002A1577 /* XCRemoteSwiftPackageReference "ToastSwiftUI" */,
 			);
 			productRefGroup = 671C6D542801762A002A1577 /* Products */;
 			projectDirPath = "";
@@ -155,7 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				671C6D592801762A002A1577 /* ContentView.swift in Sources */,
+				671C6D592801762A002A1577 /* AdminView.swift in Sources */,
+				671C6D7228019737002A1577 /* MealViewModel.swift in Sources */,
+				671C6D7028019216002A1577 /* MealTimesView.swift in Sources */,
 				671C6D572801762A002A1577 /* KardemirYemekApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +397,14 @@
 				kind = branch;
 			};
 		};
+		671C6D732801E78E002A1577 /* XCRemoteSwiftPackageReference "ToastSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huynguyencong/ToastSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -386,6 +422,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 671C6D64280176F3002A1577 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		671C6D742801E78E002A1577 /* ToastSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 671C6D732801E78E002A1577 /* XCRemoteSwiftPackageReference "ToastSwiftUI" */;
+			productName = ToastSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

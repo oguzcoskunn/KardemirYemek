@@ -108,6 +108,15 @@
           "revision": "7e2c5f3cbbeea68e004915e3a8961e20bd11d824",
           "version": "1.18.0"
         }
+      },
+      {
+        "package": "ToastSwiftUI",
+        "repositoryURL": "https://github.com/huynguyencong/ToastSwiftUI",
+        "state": {
+          "branch": "master",
+          "revision": "19acc0985eb456373ca276e960626373bd686ffe",
+          "version": null
+        }
       }
     ]
   },
