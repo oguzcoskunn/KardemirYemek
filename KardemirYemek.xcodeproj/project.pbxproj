@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09934FD5A2E675862DFAE7E3 /* Pods_KardemirYemek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D8413EDA4057341BA16367 /* Pods_KardemirYemek.framework */; };
 		671C6D572801762A002A1577 /* KardemirYemekApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C6D562801762A002A1577 /* KardemirYemekApp.swift */; };
 		671C6D592801762A002A1577 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671C6D582801762A002A1577 /* AdminView.swift */; };
 		671C6D5B2801762A002A1577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671C6D5A2801762A002A1577 /* Assets.xcassets */; };
@@ -33,6 +34,16 @@
 		67B389D4280306CD006B287A /* SwapDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B389D3280306CD006B287A /* SwapDetection.swift */; };
 		67B389D828042B88006B287A /* FocusedTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B389D728042B88006B287A /* FocusedTextEditorView.swift */; };
 		67B389DA2804564C006B287A /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B389D92804564C006B287A /* TabBarView.swift */; };
+		67E5A7242804C02300C8F928 /* AdUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A7182804C02300C8F928 /* AdUnit.swift */; };
+		67E5A7262804C02300C8F928 /* AdStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A71A2804C02300C8F928 /* AdStatus.swift */; };
+		67E5A7272804C02300C8F928 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A71B2804C02300C8F928 /* BannerAd.swift */; };
+		67E5A7282804C02300C8F928 /* FullScreenAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A71C2804C02300C8F928 /* FullScreenAd.swift */; };
+		67E5A7292804C02300C8F928 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A71D2804C02300C8F928 /* BannerViewController.swift */; };
+		67E5A72B2804C02300C8F928 /* AdFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A71F2804C02300C8F928 /* AdFormat.swift */; };
+		67E5A72C2804C02300C8F928 /* FullScreenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A7202804C02300C8F928 /* FullScreenModifier.swift */; };
+		67E5A72D2804C02300C8F928 /* RewardedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A7212804C02300C8F928 /* RewardedAd.swift */; };
+		67E5A72E2804C02300C8F928 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A7222804C02300C8F928 /* BannerAdView.swift */; };
+		67E5A72F2804C02300C8F928 /* InterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E5A7232804C02300C8F928 /* InterstitialAd.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +69,19 @@
 		67B389D3280306CD006B287A /* SwapDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapDetection.swift; sourceTree = "<group>"; };
 		67B389D728042B88006B287A /* FocusedTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextEditorView.swift; sourceTree = "<group>"; };
 		67B389D92804564C006B287A /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		67E5A7182804C02300C8F928 /* AdUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdUnit.swift; sourceTree = "<group>"; };
+		67E5A71A2804C02300C8F928 /* AdStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdStatus.swift; sourceTree = "<group>"; };
+		67E5A71B2804C02300C8F928 /* BannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		67E5A71C2804C02300C8F928 /* FullScreenAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenAd.swift; sourceTree = "<group>"; };
+		67E5A71D2804C02300C8F928 /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		67E5A71F2804C02300C8F928 /* AdFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdFormat.swift; sourceTree = "<group>"; };
+		67E5A7202804C02300C8F928 /* FullScreenModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenModifier.swift; sourceTree = "<group>"; };
+		67E5A7212804C02300C8F928 /* RewardedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAd.swift; sourceTree = "<group>"; };
+		67E5A7222804C02300C8F928 /* BannerAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		67E5A7232804C02300C8F928 /* InterstitialAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAd.swift; sourceTree = "<group>"; };
+		812DD69B10042501FCCFA2F9 /* Pods-KardemirYemek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KardemirYemek.debug.xcconfig"; path = "Target Support Files/Pods-KardemirYemek/Pods-KardemirYemek.debug.xcconfig"; sourceTree = "<group>"; };
+		B9AD57D9F485CF5F664BAA28 /* Pods-KardemirYemek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KardemirYemek.release.xcconfig"; path = "Target Support Files/Pods-KardemirYemek/Pods-KardemirYemek.release.xcconfig"; sourceTree = "<group>"; };
+		C1D8413EDA4057341BA16367 /* Pods_KardemirYemek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KardemirYemek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,17 +94,28 @@
 				671C6D68280176F3002A1577 /* FirebaseCrashlytics in Frameworks */,
 				671C6D752801E78E002A1577 /* ToastSwiftUI in Frameworks */,
 				671C6D6A280176F3002A1577 /* FirebaseFirestore in Frameworks */,
+				09934FD5A2E675862DFAE7E3 /* Pods_KardemirYemek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BF84857300143EE56668446 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8413EDA4057341BA16367 /* Pods_KardemirYemek.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		671C6D4A2801762A002A1577 = {
 			isa = PBXGroup;
 			children = (
 				671C6D552801762A002A1577 /* KardemirYemek */,
 				671C6D542801762A002A1577 /* Products */,
+				A19640E95BF04115D0EC5038 /* Pods */,
+				1BF84857300143EE56668446 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +130,7 @@
 		671C6D552801762A002A1577 /* KardemirYemek */ = {
 			isa = PBXGroup;
 			children = (
+				67E5A7172804C02300C8F928 /* AdMob */,
 				67B389BB2802383F006B287A /* Utilities */,
 				671C6D6E28017D70002A1577 /* View */,
 				671C6D6D28017D6B002A1577 /* ViewModel */,
@@ -152,6 +188,32 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		67E5A7172804C02300C8F928 /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				67E5A7182804C02300C8F928 /* AdUnit.swift */,
+				67E5A71A2804C02300C8F928 /* AdStatus.swift */,
+				67E5A71B2804C02300C8F928 /* BannerAd.swift */,
+				67E5A71C2804C02300C8F928 /* FullScreenAd.swift */,
+				67E5A71D2804C02300C8F928 /* BannerViewController.swift */,
+				67E5A71F2804C02300C8F928 /* AdFormat.swift */,
+				67E5A7202804C02300C8F928 /* FullScreenModifier.swift */,
+				67E5A7212804C02300C8F928 /* RewardedAd.swift */,
+				67E5A7222804C02300C8F928 /* BannerAdView.swift */,
+				67E5A7232804C02300C8F928 /* InterstitialAd.swift */,
+			);
+			path = AdMob;
+			sourceTree = "<group>";
+		};
+		A19640E95BF04115D0EC5038 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				812DD69B10042501FCCFA2F9 /* Pods-KardemirYemek.debug.xcconfig */,
+				B9AD57D9F485CF5F664BAA28 /* Pods-KardemirYemek.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 671C6D612801762A002A1577 /* Build configuration list for PBXNativeTarget "KardemirYemek" */;
 			buildPhases = (
+				E69D2AF8B69CECF33E288B1F /* [CP] Check Pods Manifest.lock */,
 				671C6D4F2801762A002A1577 /* Sources */,
 				671C6D502801762A002A1577 /* Frameworks */,
 				671C6D512801762A002A1577 /* Resources */,
+				4183CBFD4C33B2A50DCE9FB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +294,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4183CBFD4C33B2A50DCE9FB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KardemirYemek/Pods-KardemirYemek-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KardemirYemek/Pods-KardemirYemek-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KardemirYemek/Pods-KardemirYemek-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E69D2AF8B69CECF33E288B1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KardemirYemek-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		671C6D4F2801762A002A1577 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -237,10 +343,13 @@
 			files = (
 				671C6D592801762A002A1577 /* AdminView.swift in Sources */,
 				67B389D02802EAA7006B287A /* CustomTextFieldView.swift in Sources */,
+				67E5A7282804C02300C8F928 /* FullScreenAd.swift in Sources */,
 				67B389C52802DA2E006B287A /* DateExtensions.swift in Sources */,
 				67B389CE2802EA96006B287A /* CustomSecureFieldView.swift in Sources */,
+				67E5A72D2804C02300C8F928 /* RewardedAd.swift in Sources */,
 				67B389BA280232DE006B287A /* NetworkMonitor.swift in Sources */,
 				67B389D22802F84A006B287A /* CalendarView.swift in Sources */,
+				67E5A7272804C02300C8F928 /* BannerAd.swift in Sources */,
 				67B389C12802CC96006B287A /* MainPageView.swift in Sources */,
 				67B389B828022D9E006B287A /* KeyboardGuardian.swift in Sources */,
 				67B389D4280306CD006B287A /* SwapDetection.swift in Sources */,
@@ -248,9 +357,16 @@
 				67B389DA2804564C006B287A /* TabBarView.swift in Sources */,
 				67B389CC2802E939006B287A /* AdminLoginView.swift in Sources */,
 				671C6D7028019216002A1577 /* MealTimesView.swift in Sources */,
+				67E5A7262804C02300C8F928 /* AdStatus.swift in Sources */,
+				67E5A72E2804C02300C8F928 /* BannerAdView.swift in Sources */,
 				67B389CA2802E6C3006B287A /* AuthViewModel.swift in Sources */,
+				67E5A72B2804C02300C8F928 /* AdFormat.swift in Sources */,
+				67E5A72F2804C02300C8F928 /* InterstitialAd.swift in Sources */,
+				67E5A7292804C02300C8F928 /* BannerViewController.swift in Sources */,
 				67B389BF280238FE006B287A /* NetworkControlView.swift in Sources */,
+				67E5A72C2804C02300C8F928 /* FullScreenModifier.swift in Sources */,
 				67B389D828042B88006B287A /* FocusedTextEditorView.swift in Sources */,
+				67E5A7242804C02300C8F928 /* AdUnit.swift in Sources */,
 				67B389C32802D385006B287A /* MoveDaysViewModel.swift in Sources */,
 				671C6D572801762A002A1577 /* KardemirYemekApp.swift in Sources */,
 			);
@@ -377,6 +493,7 @@
 		};
 		671C6D622801762A002A1577 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 812DD69B10042501FCCFA2F9 /* Pods-KardemirYemek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -407,6 +524,7 @@
 		};
 		671C6D632801762A002A1577 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9AD57D9F485CF5F664BAA28 /* Pods-KardemirYemek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
