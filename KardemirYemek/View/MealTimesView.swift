@@ -8,15 +8,15 @@
 import SwiftUI
 
 enum MealTimesOptions: Int, CaseIterable {
+    case kahvalti
     case ogle
-    case aksam
     case kumanya
     
     var title: String {
         switch self {
         
+        case .kahvalti: return "Kahvaltı"
         case .ogle: return "Öğle"
-        case .aksam: return "Akşam"
         case .kumanya: return "Kumanya"
         }
     }
@@ -24,8 +24,8 @@ enum MealTimesOptions: Int, CaseIterable {
     var value: Int {
         switch self {
         
-        case .ogle: return 0
-        case .aksam: return 1
+        case .kahvalti: return 0
+        case .ogle: return 1
         case .kumanya: return 2
         }
     }

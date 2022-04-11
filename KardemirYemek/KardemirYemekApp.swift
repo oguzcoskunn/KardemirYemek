@@ -15,7 +15,8 @@ struct KardemirYemekApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainPageView()
+                .environmentObject(AuthViewModel.shared)
         }
     }
 }
