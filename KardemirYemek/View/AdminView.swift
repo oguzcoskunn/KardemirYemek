@@ -42,7 +42,7 @@ struct AdminView: View {
                                 Text(self.editMode ? "İptal" : "Düzenle")
                                     .font(.system(size: 13))
                                     .frame(width: 80, height: 30)
-                                    .background(monitor.isConnected ? Color.green : Color.gray)
+                                    .background(monitor.isConnected ? Color("green") : Color.gray)
                                     .foregroundColor(.black)
                             }
                             .cornerRadius(20)
@@ -83,7 +83,7 @@ struct AdminView: View {
                         Text("Kaydet")
                             .font(.system(size: 13))
                             .frame(width: 80, height: 30)
-                            .background(monitor.isConnected ? Color.green : Color.gray)
+                            .background(monitor.isConnected ? Color("green") : Color.gray)
                             .foregroundColor(.black)
                     })
                     .disabled(monitor.isConnected ? false : true)

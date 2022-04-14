@@ -42,7 +42,7 @@ struct TabBarView: View {
                     
                 }
             }
-            .foregroundColor(Color.red)
+            .foregroundColor(Color("red"))
             .frame(width: 80, height: 80)
             
             Spacer()
@@ -58,7 +58,7 @@ struct TabBarView: View {
                                 .font(.system(size: 30))
                             Text("Menüleri Düzenle")
                                 .font(.system(size: 10, weight: .heavy, design: .serif))
-                        }.foregroundColor(Color.green)
+                        }.foregroundColor(Color("arrowColor"))
                     }
                 }
             }.frame(width: 80, height: 80)
@@ -81,7 +81,7 @@ struct TabBarView: View {
                             .font(.system(size: 30))
                         Text("Takvim Görünümü")
                             .font(.system(size: 10, weight: .heavy, design: .serif))
-                    }.foregroundColor(Color.blue)
+                    }.foregroundColor(Color("purple"))
                 }
                 NavigationLink(isActive: $goCalenderView) {
                     CalendarView(showIntersitialAd: $showIntersitialAd)

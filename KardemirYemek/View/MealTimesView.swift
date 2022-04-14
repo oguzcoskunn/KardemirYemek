@@ -60,7 +60,7 @@ struct FilterButtonView: View {
             
             Rectangle()
                 .frame(width: underlineWidth, height: 3, alignment: .center)
-                .foregroundColor(Color.red)
+                .foregroundColor(Color.pink)
                 .padding(.leading, padding)
                 .animation(.spring(), value: selectedOption)
         }

@@ -87,7 +87,7 @@ struct MainPageView: View {
                                 .font(.system(size: 40))
                         }
                     }
-                    .foregroundColor(Color.blue)
+                    .foregroundColor(Color("arrowColor"))
                     .padding(.horizontal)
                     .padding(.vertical, 5)
                     
@@ -127,7 +127,7 @@ struct MainPageView: View {
                                 Text(self.editMode ? "İptal" : "Düzenle")
                                     .font(.system(size: 15))
                                     .frame(width: 80, height: 30)
-                                    .background(monitor.isConnected ? Color.green : Color.gray)
+                                    .background(monitor.isConnected ? Color("green") : Color.gray)
                                     .foregroundColor(.black)
                             }
                             .disabled(monitor.isConnected ? false : true)
@@ -153,7 +153,7 @@ struct MainPageView: View {
                 })
                 .toast(isPresenting: $saveAnnounce, message: "Duyuru Kaydedildi!", icon: .success, backgroundColor: Color.green, autoDismiss: .after(2))
                 .navigationBarHidden(true)
-                .navigationTitle("Ana Sayfa")
+                .navigationTitle(Text("Anasayfa"))
                 .background(Image("background").resizable().scaledToFill())
                 .edgesIgnoringSafeArea(.all)
         }
