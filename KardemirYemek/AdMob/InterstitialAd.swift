@@ -60,13 +60,16 @@ final class InterstitialAdView: NSObject, UIViewControllerRepresentable, GADFull
         if let ad = interstitialAd {
             ad.present(fromRootViewController: root)
         } else {
-            self.isPresented.toggle()
+            self.isPresented = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                self.isPresented = true
+            }
         }
     }
     
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         InterstitialAd.shared.loadAd(withAdUnitId: adUnitId)
         
-        isPresented.toggle()
+        self.isPresented = false
     }
 }

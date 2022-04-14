@@ -65,13 +65,16 @@ final class RewardedAdView: NSObject, UIViewControllerRepresentable, GADFullScre
                 self.rewardFunc()
             }
         } else {
-            self.isPresented.toggle()
+            self.isPresented = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                self.isPresented = true
+            }
         }
     }
     
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         RewardedAd.shared.loadAd(withAdUnitId: adUnitId)
         
-        isPresented.toggle()
+        self.isPresented = false
     }
 }
